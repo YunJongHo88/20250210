@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Page Title</title>
+  <style>
+    /*reset*/
+    * {
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    ul,
+    ol,
+    li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+
+    /*수입과일*/
+    #product {
+      width: 1000px;
+      height: 800px;
+      margin: 0 auto;
+      border: 2px solid gray;
+    }
+
+    #product>h3 {
+      font-size: 20px;
+      color: green;
+      text-align: center;
+      line-height: 50px;
+      letter-spacing: 5px;
+    }
+
+    #product>p {
+      font-size: 17px;
+      color: #000;
+      text-align: center;
+      line-height: 50px;
+    }
+
+
+    #product>.box {
+      width: 200px;
+      height: 300px;
+      float: left;
+      margin: 20px 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    #product>.box:hover {
+      box-shadow: 4px 4px 4px #eee;
+    }
+
+    #product>.box>a>img {
+      width: 100%;
+      height: 200px;
+    }
+
+    #product>.box>h4>a {
+      font-size: 15px;
+      color: #000;
+    }
+
+    #product>.box>p>a {
+      font-size: 12px;
+      color: #666;
+    }
+
+    #product>.box>span>a {
+      font-size: 12px;
+      color: tomato;
+      font-weight: bold;
+    }
+
+    /*제철과일/농산물*/
+    #sale {
+      width: 1000px;
+      height: 800px;
+      margin: 0 auto;
+      border: 2px solid gray;
+      background-color: pink;
+    }
+
+    #sale>h3 {
+      font-size: 20px;
+      color: green;
+      text-align: center;
+      line-height: 50px;
+      letter-spacing: 5px;
+    }
+
+    #sale>p {
+      font-size: 17px;
+      color: #000;
+      text-align: center;
+      line-height: 50px;
+    }
+
+
+    #sale>.sbox {
+      width: 170px;
+      height: 300px;
+      float: left;
+      margin: 20px 10px;
+      border: 1px solid #ddd;
+    }
+
+    #sale>.sbox:hover {
+      box-shadow: 4px 4px 4px #eee;
+    }
+
+    #sale>.sbox>a>img {
+      width: 100%;
+      height: 200px;
+    }
+
+    #sale>.sbox>h4>a {
+      font-size: 15px;
+      color: #000;
+    }
+
+    #sale>.sbox>p>a {
+      font-size: 12px;
+      color: #666;
+    }
+
+    #sale>.sbox>span>a {
+      font-size: 12px;
+      color: tomato;
+      font-weight: bold;
+    }
+
+    /*절임배추/김치*/
+    #product {
+      width: 1000px;
+      height: 800px;
+      margin: 0 auto;
+      border: 2px solid gray;
+    }
+
+    #product>h3 {
+      font-size: 20px;
+      color: green;
+      text-align: center;
+      line-height: 50px;
+      letter-spacing: 5px;
+    }
+
+    #product>p {
+      font-size: 17px;
+      color: #000;
+      text-align: center;
+      line-height: 50px;
+    }
+
+
+    #product>.box {
+      width: 200px;
+      height: 300px;
+      float: left;
+      margin: 20px 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+
+    #product>.box:hover {
+      box-shadow: 4px 4px 4px #eee;
+    }
+
+    #product>.box>a>img {
+      width: 100%;
+      height: 200px;
+    }
+
+    #product>.box>h4>a {
+      font-size: 15px;
+      color: #000;
+    }
+
+    #product>.box>p>a {
+      font-size: 12px;
+      color: #666;
+    }
+
+    #product>.box>span>a {
+      font-size: 12px;
+      color: tomato;
+      font-weight: bold;
+    }
+
+    /*축산/수산/건어물*/
+    #sale {
+      width: 1000px;
+      height: 800px;
+      margin: 0 auto;
+      border: 2px solid gray;
+      background-color: pink;
+    }
+
+    #sale>h3 {
+      font-size: 20px;
+      color: green;
+      text-align: center;
+      line-height: 50px;
+      letter-spacing: 5px;
+    }
+
+    #sale>p {
+      font-size: 17px;
+      color: #000;
+      text-align: center;
+      line-height: 50px;
+    }
+
+
+    #sale>.sbox {
+      width: 170px;
+      height: 300px;
+      float: left;
+      margin: 20px 10px;
+      border: 1px solid #ddd;
+    }
+
+    #sale>.sbox:hover {
+      box-shadow: 4px 4px 4px #eee;
+    }
+
+    #sale>.sbox>a>img {
+      width: 100%;
+      height: 200px;
+    }
+
+    #sale>.sbox>h4>a {
+      font-size: 15px;
+      color: #000;
+    }
+
+    #sale>.sbox>p>a {
+      font-size: 12px;
+      color: #666;
+    }
+
+    #sale>.sbox>span>a {
+      font-size: 12px;
+      color: tomato;
+      font-weight: bold;
+    }
+  </style>
+
+
+</head>
+
+<body>
+  <header>
+    <div id="" box"></div>
+    <div id="login">
+      <ul>
+        <li> 장바구니</li>
+        <li> 로그인</li>
+        <li> 회원가입</li>
+        <li> 고객센터</li>
+        <li> 마이페이지</li>
+      </ul>
+    </div>
+    <div id="" logo">
+      <img src="https://www.orangec.co.kr/design/orangec/djds/top/top_logo.png"="오렌지씨">
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#">전체카테고리</a></li>
+        <li><a href=*#*>선물세트</a></li>
+        <li><a href="#">수입과일</a></li>
+        <li><a href=*#*>국산제철과일</a></li>
+        <li><a href=*#*>농산물</a></li>
+        <li><a href=*#*>김치</a></li>
+        <li><a href=*#*>축수산물</a></li>
+
+      </ul>
+
+    </nav>
+  </header>
+
+  <div id="" slider">
+    <img src="" img/slider.jpg" alt="https://www.orangec.co.kr/design/orangec/djds/top/top_left_bnr.png" alt="오렌지씨"
+      <!--수입과일-->
+    <div id="product">
+      <h3>수입과일</h3>
+      <P>다양한 종류의 과일을 만나보세요.</p>
+
+      <div class="box">
+        <a href="#"><img src="img/img1.jpg" alt=""> </a>
+        <h4><a href="#">발렌시아오렌지</a></h4>
+        <p><a href="#">비타민C 대장</a></p>
+        <span><a href="#">13,500</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="img/img2.jpg" alt=""> </a>
+        <h4><a href="#">프리미엄아보카도</a></h4>
+        <p><a href="#">슈퍼푸드</a></p>
+        <span><a href="#">12,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="img/img3.jpg" alt=""> </a>
+        <h4><a href="#">체리</a></h4>
+        <p><a href="#">새콤달콩</a></p>
+        <span><a href="#">19,500</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="img.img4.jpg" alt=""> </a>
+        <h4><a href="#">파인애플</a></h4>
+        <p><a href="#">소화개선 도움</a></p>
+        <span><a href="#">10,500</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="img.img5.jpg" alt=""> </a>
+        <h4><a href="#">프리미엄 수입 생 블루베리</a></h4>
+        <p><a href="#">눈건강에 도움</a></p>
+        <span><a href="#">11,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="img/img6.jpg" alt=""> </a>
+        <h4><a href="#">프리미엄 애플망고</a></h4>
+        <p><a href="#">일반 망고 대비 2배이상 높은 당도</a></p>
+        <span><a href="#">17,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="img/img7.jpg" alt=""> </a>
+        <h4><a href="#">태국 생 망고스틴</a></h4>
+        <p><a href="#">과일의 여왕</a></p>
+        <span><a href="#">10,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/025000000010.jpg?1641862804" alt=""> </a>
+        <h4><a href="#">바나나</a></h4>
+        <p><a href="#">운동 후 필수</a></p>
+        <span><a href="#">7,000</a></span>
+      </div>
+    </div>
+    <!--제철과일/농산물-->
+    <div id="product">
+      <h3>제철과일/농산물</h3>
+      <P>최상의 맛/최고의 신선도를 만나보세요.</p>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/057000000001.jpg?1701996000" alt=""> </a>
+        <h4><a href="#">국내산 생딸기</a></h4>
+        <p><a href="#">부드럽고 달콤</a></p>
+        <span><a href="#">13,500</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/057000000016.jpg?1672044081" alt=""> </a>
+        <h4><a href="#">제주 고당도 홍매향</a></h4>
+        <p><a href="#">기존 딸기대비 풍미가 뛰어남</a></p>
+        <span><a href="#">29,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/057000000089.jpg?1731047119" alt=""> </a>
+        <h4><a href="#">제주 루비 레드키위</a></h4>
+        <p><a href="#">일반키위와 차별화된 맛</a></p>
+        <span><a href="#">18,500</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/057000000036.jpg?1730873186" alt=""> </a>
+        <h4><a href="#">하우스 꿀수박</a></h4>
+        <p><a href="#">여름에 필수</a></p>
+        <span><a href="#">15,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/052000000086.jpg?1704180149" alt=""> </a>
+        <h4><a href="#">제주 월동무</a></h4>
+        <p><a href="#">다재다능한 멀티 식재료</a></p>
+        <span><a href="#">12,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/052000000063.jpg?1676273926" alt=""> </a>
+        <h4><a href="#">제주 햇 흙당근</a></h4>
+        <p><a href="#">아삭한 식감과 은은한 단맛</a></p>
+        <span><a href="#">8,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/052000000028.jpg?1718079578" alt=""> </a>
+        <h4><a href="#">고당도 꿀고구마</a></h4>
+        <p><a href="#">다이어트에 필수</a></p>
+        <span><a href="#">6,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/052000000078.jpg?1684385094" alt=""> </a>
+        <h4><a href="#">렌틸콩</a></h4>
+        <p><a href="#">단백질과 식이섬유가 풍부</a></p>
+        <span><a href="#">6,900</a></span>
+      </div>
+    </div>
+    <!--절임배추/김치-->
+    <div id="product">
+      <h3>절임배추/김치</h3>
+      <P>김치 담그는 과정을 줄여보세요.</p>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/042000000019.jpg?1712910967" alt=""> </a>
+        <h4><a href="#">포기김치</a></h4>
+        <p><a href="#">한국 필수반찬</a></p>
+        <span><a href="#">13,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/042000000017.jpg?1714092038" alt=""> </a>
+        <h4><a href="#">국산 맛김치 배추김치</a></h4>
+        <p><a href="#">즉석 반찬이나 볶음밥 요리에 적합</a></p>
+        <span><a href="#">14,500</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/042000000021.jpg?1714092430" alt=""> </a>
+        <h4><a href="#">시원아삭 국산 깍두기</a></h4>
+        <p><a href="#">국물 곁들임 음식으로 주로 활용</a></p>
+        <span><a href="#">12,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img
+            src="https://recipe1.ezmember.co.kr/cache/recipe/2016/10/06/4bb97a26c7726532fafe35407525e9241.jpg" alt="">
+        </a>
+        <h4><a href="#">파김치</a></h4>
+        <p><a href="#">짜파게티 단짝</a></p>
+        <span><a href="#">15,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img
+            src="https://recipe1.ezmember.co.kr/cache/recipe/2016/10/06/7adfc6699ccc6be545789a69351299ef1.jpg" alt="">
+        </a>
+        <h4><a href="#">열무김치</a></h4>
+        <p><a href="#">여름철 별미</a></p>
+        <span><a href="#">14,500</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://oasisprodproduct.edge.naverncp.com/51416/thumb/999" alt=""> </a>
+        <h4><a href="#">갓김치</a></h4>
+        <p><a href="#">독특한 향과 맛</a></p>
+        <span><a href="#">16,000</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img
+            src="https://static.wtable.co.kr/image/production/service/recipe/230/7b0cc6e4-63c6-4caa-b97c-213fbb9a537c.jpg"
+            alt=""> </a>
+        <h4><a href="#">오이소박이</a></h4>
+        <p><a href="#">시원한 맛</a></p>
+        <span><a href="#">11,000</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img
+            src="https://i.namu.wiki/i/O-J-qt2Qbqy4EdBvOBsx9Mkk9eJtZ38tZhKwr54igxSmHOtBTquxMDVLmRXrJqwKscdqV6nSJituwTwjZx77uQ.webp"
+            alt=""> </a>
+        <h4><a href="#">백김치</a></h4>
+        <p><a href="#">깔끔하고 개운한맛</a></p>
+        <span><a href="#">9,000</a></span>
+      </div>
+    </div>
+    <!--축산/수산/건어물-->
+    <div id="product">
+      <h3>축산/수산/건어물</h3>
+      <P>3가지 다른 영양적 가치를 경험해보세요.</p>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/058000000014.jpg?1702430618" alt=""> </a>
+        <h4><a href="#">과메기</a></h4>
+        <p><a href="#">완전 손질된 과메기</a></p>
+        <span><a href="#">12,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/058000000022.jpg?1716365967" alt=""> </a>
+        <h4><a href="#">저염 명란젓</a></h4>
+        <p><a href="#">밥도둑</a></p>
+        <span><a href="#">12,500</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/058000000025.jpg?1719284286" alt=""> </a>
+        <h4><a href="#">세꼬시회</a></h4>
+        <p><a href="#">고소한 맛과 아삭한 식감</a></p>
+        <span><a href="#">21,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/058000000023.jpg?1717546981" alt=""> </a>
+        <h4><a href="#">명태회무침</a></h4>
+        <p><a href="#">밥도둑</a></p>
+        <span><a href="#">11,500</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/058000000029.jpg?1723194157" alt=""> </a>
+        <h4><a href="#">대구 매운탕</a></h4>
+        <p><a href="#">얼큰하고 시원한 맛</a></p>
+        <span><a href="#">13,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/058000000004.jpg?1681431660" alt=""> </a>
+        <h4><a href="#">무항생제 유정란</a></h4>
+        <p><a href="#">영양가 UP 신선도 UP</a></p>
+        <span><a href="#">13,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/058000000015.jpg?1699583009" alt=""> </a>
+        <h4><a href="#">제주 흑돼지 육포</a></h4>
+        <p><a href="#">쫄깃한 식감</a></p>
+        <span><a href="#">15,900</a></span>
+      </div>
+
+      <div class="box">
+        <a href="#"><img src="https://www.orangec.co.kr/shopimages/orangec/058000000012.jpg?1698201232" alt=""> </a>
+        <h4><a href="#">제철 급냉 대구</a></h4>
+        <p><a href="#">달달하고 고소한 맛</a></p>
+        <span><a href="#">15,900</a></span>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+</body>
+
+</html>
